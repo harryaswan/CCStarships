@@ -19,9 +19,9 @@ class ConsoleUI
         case split_string[0]
         when "viewstore", "vs"
             @feedback = @shop.view_stock()
-        when "viewships", "ships"
+        when "viewships", "ships", "s"
             @feedback = @shop.view_customer(split_string[1].to_i)
-        when "viewcustomers", "viewc"
+        when "viewcustomers", "viewc", "vc"
             @feedback = @shop.view_customers()
         when "viewstaff", "views"
             @feedback = @shop.view_staff()
@@ -66,7 +66,7 @@ class ConsoleUI
         puts "viewstore (vs)        : prints the store's stock".green
         puts "addstaff [x] [y]      : creates a new member of staff, [x] being their name, [y] being their species".green
         puts "addcustomer [x] [y]   : creates a new customer, [x] being their name, [y] being their species"
-        puts "viewc                 : prints a list of all the customers to the screen"
+        puts "viewc, vc             : prints a list of all the customers to the screen"
 #        puts "viewcustomer [x]      : prints the customers name, species and all the starships they own, [x] being the customer index from viewcustomers command"
         puts "ships customer(index) : prints the ships owned by customer".green
         puts "help                  : prints out this menu"

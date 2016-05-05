@@ -98,10 +98,12 @@ attr_reader :name
     end
 
     def viewchar(arr)
-        string = ""
+        string = "Name, Species \n"
         for char in arr
-            string << "Name: #{char.name.cyan}, Species: #{char.species.cyan} \n"
+          #  string << "Name                                          Species:      "
+            string << "#{1+arr.index(char)}:#{char.name.cyan}, #{char.species.cyan} \n"
         end
+        string << "Enter 'ships' number to view character's ships"
         return string
     end
 
